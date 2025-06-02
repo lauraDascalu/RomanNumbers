@@ -42,6 +42,7 @@ parse2 Nothing = []
 parse2 (Just x)= x
 
 eval:: RomanNumber -> Int
+eval []= 0
 eval [x]= value(x)
 eval (x:y:ys)
     | x>=y = value(x) + eval (y:ys)
